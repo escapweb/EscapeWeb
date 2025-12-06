@@ -133,3 +133,52 @@ function animateValue(element, start, end, duration, suffix = '') {
     };
     window.requestAnimationFrame(step);
 }
+
+
+// Contact Form Submit Handler
+
+const scriptURL = 'https://formspree.io/f/mblqlzaw';
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('contactForm');
+    const formContent = document.getElementById('formContent');
+    const successMessage = document.getElementById('successMessage');
+    const submitBtn = form.querySelector('.btn-submit');
+
+    // Add loading state
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+    submitBtn.disabled = true;
+
+    // Simulate form submission (replace with actual API call)
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    setTimeout(() => {
+        // Hide form and show success message
+        formContent.style.display = 'none';
+        successMessage.classList.add('show');
+
+        // Reset form
+        form.reset();
+        submitBtn.innerHTML = 'Send Message <i class="bi bi-arrow-right"></i>';
+        submitBtn.disabled = false;
+
+        // Optional: Reset after 5 seconds
+        setTimeout(() => {
+            formContent.style.display = 'block';
+            successMessage.classList.remove('show');
+        }, 5000);
+    }, 1500);
+}
+
+// Add input animation effects
+document.querySelectorAll('.form-floating-custom input, .form-floating-custom textarea').forEach(input => {
+    input.addEventListener('focus', function () {
+        this.parentElement.classList.add('focused');
+    });
+
+    input.addEventListener('blur', function () {
+        this.parentElement.classList.remove('focused');
+    });
+});
+

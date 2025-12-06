@@ -9,7 +9,7 @@
 
     <!-- Primary SEO Meta Tags -->
     <title>EscapeWeb - Wedding Photographer Website Builder</title>
-    <meta name="title" content="EscapeWeb: Elegant & Fast Wedding Photographer Website Builde">
+    <meta name="title" content="EscapeWeb: Elegant & Fast Wedding Photographer Website Builder">
     <meta name="description"
         content="Design stunning, professional photography websites that attract more clients. Showcase your wedding, birthday, and event photos with our elegant and lightning-fast website builder. Start your free trial!">
     <meta name="keywords"
@@ -25,7 +25,7 @@
     <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.escapeweb.in/">
-    <meta property="og:title" content="EscapeWeb: Elegant & Fast Wedding Photographer Website Builde">
+    <meta property="og:title" content="EscapeWeb: Elegant & Fast Wedding Photographer Website Builder">
     <meta property="og:description"
         content="Design stunning, professional photography websites that attract more clients. Showcase your wedding, birthday, and event photos with our elegant and lightning-fast website builder. Start your free trial!">
     <meta property="og:image" content="https://www.escapeweb.in/assets/images/favicon_io/og-image.jpg">
@@ -38,7 +38,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.escapeweb.in/">
-    <meta name="twitter:title" content="EscapeWeb: Elegant & Fast Wedding Photographer Website Builde">
+    <meta name="twitter:title" content="EscapeWeb: Elegant & Fast Wedding Photographer Website Builder">
     <meta name="twitter:description"
         content="Design stunning, professional photography websites that attract more clients. Showcase your wedding, birthday, and event photos with our elegant and lightning-fast website builder. Start your free trial!">
     <meta name="twitter:image" content="https://www.escapeweb.in/assets/images/favicon_io/twitter-card.jpg">
@@ -70,7 +70,7 @@
 {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "EscapeWeb: Elegant & Fast Wedding Photographer Website Builde",
+    "name": "EscapeWeb: Elegant & Fast Wedding Photographer Website Builder",
     "image": "https://www.escapeweb.in/assets/images/logo.png",
     "description": "Design stunning, professional photography websites that attract more clients. Showcase your wedding, birthday, and event photos with our elegant and lightning-fast website builder. Start your free trial!",
     "@id": "https://www.escapeweb.in",
@@ -147,7 +147,7 @@
                         <a class="nav-link" href="#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
+                        <a class="nav-link" href="#contact-form">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -302,10 +302,6 @@
             <h3>Moments & Details</h3>
             <div class="horizontal-scroll">
                 <div class="showcase-item" onclick="openLightbox(this)">
-                    <img src="images/others/kissing-portrait.jpg" alt="Moment 1">
-                    <p>First kiss</p>
-                </div>
-                <div class="showcase-item" onclick="openLightbox(this)">
                     <img src="images/others/pre-wedding-shoot.jpg" alt="Moment 2">
                     <p>Pre Wedding</p>
                 </div>
@@ -316,6 +312,10 @@
                 <div class="showcase-item" onclick="openLightbox(this)">
                     <img src="images/others/after-marrage-photoshot.jpg" alt="Moment 4">
                     <p>After Marraige</p>
+                </div>
+                <div class="showcase-item" onclick="openLightbox(this)">
+                    <img src="images/others/kissing-portrait.jpg" alt="Moment 1">
+                    <p>First kiss</p>
                 </div>
                 <div class="showcase-item" onclick="openLightbox(this)">
                     <img src="images/others/mehndi-shooting.jpg" alt="Moment 5">
@@ -411,8 +411,8 @@
         <p class="cta-text fade-in">Start Your Growth Now by Getting Your Business Online!</p>
 
         <div class="contact-buttons fade-in" id="contact">
-            <a href="#" class="btn btn-coral"><i class="bi bi-envelope me-2"></i>Contact Us</a>
-            <a href="tel:++918581824565" class="btn btn-call"><i class="bi bi-telephone me-2"></i>Call Us</a>
+            <a href="#contact-form" class="btn btn-coral"><i class="bi bi-envelope me-2"></i>Contact Us</a>
+            <a href="tel:+918581824565" class="btn btn-call"><i class="bi bi-telephone me-2"></i>Call Us</a>
             <a href="https://wa.me/918581824565" class="btn btn-whatsapp"><i
                     class="bi bi-whatsapp me-2"></i>WhatsApp</a>
         </div>
@@ -462,6 +462,85 @@
         <a href="#pricing" class="btn btn-start pulse">Start Today @₹999</a>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-form">
+        <!-- Floating Hearts Animation -->
+        <div class="floating-hearts">
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+        </div>
+
+        <div class="contact-form-wrapper fade-in">
+            <div class="contact-form-card">
+                <!-- Decorative circles -->
+                <div class="form-decoration top-left"></div>
+                <div class="form-decoration bottom-right"></div>
+
+                <!-- Form Content -->
+                <div id="formContent">
+                    <h2>Get In Touch</h2>
+                    <p class="subtitle">We'd love to hear from you</p>
+
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <!-- Name Field -->
+                        <div class="form-floating-custom">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <i class="bi bi-person input-icon"></i>
+                            <label for="name">Your Name</label>
+                        </div>
+
+                        <!-- Phone Number Field -->
+                        <div class="form-floating-custom">
+                            <input type="number" id="phone" name="phone" placeholder=" " required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                            <i class="bi bi-telephone input-icon"></i>
+                            <label for="phone">Phone Number</label>
+                        </div>
+
+                        <!-- Description Field (Optional) -->
+                        <div class="form-floating-custom">
+                            <textarea id="description" name="description" placeholder=" " rows="4"></textarea>
+                            <i class="bi bi-chat-text input-icon"></i>
+                            <label for="description">Tell us about your project <span class="optional-badge">(Optional)</span></label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit">
+                            Send Message <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <!-- Contact Info Row -->
+                    <div class="contact-info-row">
+                        <a href="tel:+919876543210" class="contact-info-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span>+91 85818 24565</span>
+                        </a>
+                        <a href="https://wa.me/918581824565" class="contact-info-item">
+                            <i class="bi bi-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:escapeweb@gmail.com" class="contact-info-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>escapeweb@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="pricing" class="pricing-section">
         <div class="container">
@@ -479,7 +558,7 @@
                             <li>Social Media Links</li>
                             <li>Basic SEO</li>
                         </ul>
-                        <a href="#contact-us" class="btn btn-coral">Get Started</a>
+                        <a href="#contact-form" class="btn btn-coral">Get Started</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -496,7 +575,7 @@
                             <li>Advanced SEO</li>
                             <li>Priority Support</li>
                         </ul>
-                        <a href="#contact-us" class="btn btn-coral">Get Started</a>
+                        <a href="#contact-form" class="btn btn-coral">Get Started</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -512,7 +591,7 @@
                             <li>24/7 Support</li>
                             <li>Marketing Package</li>
                         </ul>
-                        <a href="#contact-us" class="btn btn-coral">Contact Us</a>
+                        <a href="#contact-form" class="btn btn-coral">Contact Us</a>
                     </div>
                 </div>
             </div>
