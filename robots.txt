@@ -1,10 +1,7 @@
-# robots.txt
 User-agent: *
 Allow: /
 
-# Disallow admin or private areas
 Disallow: /admin/
 Disallow: /private/
 
-# Sitemap location
-Sitemap: https://www.escapeweb.in/sitemap.xml
+Sitemap: https://escapweb.github.io/EscapeWeb/sitemap.xml
