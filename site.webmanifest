@@ -1,7 +1,7 @@
 {
     "name": "EscapeWeb: Elegant & Fast Wedding Photographer Website Builder",
     "short_name": "EscapeWeb",
-    "start_url": "/",
+    "start_url": "/EscapeWeb/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#25D366",
